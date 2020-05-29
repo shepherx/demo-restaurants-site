@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Sacramento&display=swap");
+
+:root {
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Sacramento", cursive;
+    /* font-family: "Nanum Gothic", sans-serif; */
+    background-color: #ececec;
+    color: #0e1111;
+    /* overflow: hidden; */
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    max-width: 80%;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.header-text {
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+    color: black;
+}
+
+.main-header ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+}
+
+.main-header a {
+    padding: 3rem;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.img-container img {
+    background-repeat: no-repeat;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 4rem;
+}
+
+.content {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 4%;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 50%;
+    z-index: 10;
+}
+
+.content h1 {
+    /* font-family: "Nanum Gothic", sans-serif; */
+    font-size: 6rem;
+}
+
+.content p {
+    font-size: 1.4rem;
+    font-family: "Nanum Gothic", sans-serif;
+    padding-left: 1rem;
+}
+
+.content a {
+    color: #ececec;
+    font-family: "Nanum Gothic", sans-serif;
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+a {
+    transition: ease-in 0.3s;
+}
+
+/* Menu items */
+
+.menu-div {
+    background-color: rgba(0, 0, 0, 0.14);
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+}
+
+.img1-div img {
+    max-width: 600px;
+}
+
+.img2-div img {
+    max-width: 533px;
+}
+
+.menu-div > div {
+    padding: 1.2rem;
+    font-size: 2rem;
+}
+
+.menu-div p {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+
+.bottom-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: black solid 2px;
+}
+
+.menu-heading-text {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+.menu-heading-text h3 {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    width: 70%;
+    font-size: 3rem;
+    padding: 2rem;
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background-color: cornflowerblue;
+    opacity: 70%;
+    color: black;
+    text-align: center;
+    align-items: center;
+    height: 4rem;
+    margin-top: 3rem;
+}
+
+.footer p {
+    text-align: center;
+    display: flex;
+    max-width: 50%;
+    margin: auto;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+/* media queries */
+
+@media (max-width: 800px) {
+    .img-container {
+        display: none;
+    }
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        padding: 0;
+    }
+    .main-header ul {
+        max-width: 100%;
+        padding: 0;
+        justify-content: space-evenly;
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .main-header a {
+        padding: 0;
+        display: flex;
+        /* flex-direction: column; */
+        margin-right: 5rem;
+    }
+
+    .menu-heading-text {
+        display: flex;
+        flex-direction: row;
+        /* margin: auto; */
+        max-width: 70%;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .menu-heading-text h3 {
+        font-size: 1.5rem;
+        padding: 0;
+        /* margin: auto; */
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-div {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        /* margin: auto;
+        justify-content: space; */
+    }
+
+    .menu-div > div {
+        padding: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        /* margin: 1rem; */
+        /* font-size: 2rem; */
+    }
+
+    .bottom-area {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    .img1-div img {
+        max-width: 450px;
+    }
+    .img2-div img {
+        max-width: 450px;
+    }
+
+    .footer {
+        display: none;
+    }
+}
